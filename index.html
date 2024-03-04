@@ -14,27 +14,11 @@
                 <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
             </div>
             <div class = "buttons">
-                <button class="btn" id = "yesButton" onclick="sendMessage()" onclick="nextPage()">Certo Jas ti voglio bene pure io</button>
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
                 <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
                 <script>
                     function nextPage() {
                         window.location.href = "yes.html";
-                     function sendMessage() {
-      const request = new XMLHttpRequest();
-      request.open("POST", "https://canary.discord.com/api/webhooks/1214291388506837033/9vkt2O4pOIC6ifBp5P17oPwuF3nhA2tRiDqYFFxRS55DV0vwXd24TO-v8aW4Dw_V677R");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      const params = {
-        username: "Esce con me",
-        avatar_url: "",
-        content: "Questa persona vuole uscire con te!"
-      }
-
-      request.send(JSON.stringify(params));
-    }
-function hexToDecimal(hex) {
-  return parseInt(hex.replace("#",""), 16)
                     }
                     
                     function moveButton() {
