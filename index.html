@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles.css">
         
     </head> 
@@ -14,8 +16,8 @@
                 <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
             </div>
             <div class = "buttons">
-                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
-                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <button class="btn" id = "yesButton" onclick="nextPage()">Certo</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No cane</button>
                 <script>
                     function nextPage() {
                         window.location.href = "yes.html";
@@ -27,6 +29,20 @@
                         document.getElementById('noButton').style.left = `${x}px`;
                         document.getElementById('noButton').style.top = `${y}px`;
                     }
+                    function sendMessage() {
+    const request = new XMLHttpRequest();
+    request.open("POST", "https://discord.com/api/webhooks/1214296539850088559/VdJ_k9d5Ti1ZXSYm7LnzfImFh21TZp0fYi8PJ6P4qXTHQ8UDTXHWgQV2Jr-lfKncPl5U");
+
+    request.setRequestHeader('Content-type', 'application/json');
+
+    const params = {
+      username: "My Webhook Name",
+      avatar_url: "",
+      content: "The message to send"
+    }
+
+    request.send(JSON.stringify(params));
+  }
                 </script> 
             </div>
         </div>
