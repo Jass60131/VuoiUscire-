@@ -16,8 +16,8 @@
                 <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
             </div>
             <div class = "buttons">
-                <button class="btn" id = "yesButton"  onclick="nextPage()" >Certo</button>
-                <button class="btn" id = "yesButton"  onclick="sendMessage()"  >Certo</button>
+                <button class="btn" id = "yesButton"  onclick="entrambeLeFunzioni()" >Certo</button>
+    
                 <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No cane</button>
                 <script>
                     function nextPage() {
@@ -44,6 +44,13 @@
 
     request.send(JSON.stringify(params));
   }
+
+
+  function entrambeLeFunzioni() {
+    nextPage();
+    sendMessage();
+
+}
                 </script> 
             </div>
         </div>
