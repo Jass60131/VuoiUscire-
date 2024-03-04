@@ -19,39 +19,38 @@
                 <button class="btn" id = "yesButton"  onclick="entrambeLeFunzioni()" >Certo</button>
     
                 <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No cane</button>
-                <script>
-                    function nextPage() {
-                        window.location.href = "./yes.html";
-                    }
-                    
-                    function moveButton() {
-                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
-                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
-                        document.getElementById('noButton').style.left = `${x}px`;
-                        document.getElementById('noButton').style.top = `${y}px`;
-                    }
-                    function sendMessage() {    
-    const request = new XMLHttpRequest();
-    request.open("POST", "https://discord.com/api/webhooks/1214296539850088559/VdJ_k9d5Ti1ZXSYm7LnzfImFh21TZp0fYi8PJ6P4qXTHQ8UDTXHWgQV2Jr-lfKncPl5U");
-
-    request.setRequestHeader('Content-type', 'application/json');
-
-    const params = {
-      username: "My Webhook Name",
-      avatar_url: "",
-      content: "Questa persona vuole USCIRE CON TE"
+<script>
+    function nextPage() {
+        window.location.href = "/yes.html";
     }
 
-    request.send(JSON.stringify(params));
-  }
+    function moveButton() {
+        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+        document.getElementById('noButton').style.left = `${x}px`;
+        document.getElementById('noButton').style.top = `${y}px`;
+    }
 
+    function sendMessage() {
+        const request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1214296539850088559/VdJ_k9d5Ti1ZXSYm7LnzfImFh21TZp0fYi8PJ6P4qXTHQ8UDTXHWgQV2Jr-lfKncPl5U");
 
-  function entrambeLeFunzioni() {
-    nextPage();
-    sendMessage();
+        request.setRequestHeader('Content-type', 'application/json');
 
-}
-                </script> 
+        const params = {
+            username: "My Webhook Name",
+            avatar_url: "",
+            content: "Questa persona vuole USCIRE CON TE"
+        }
+
+        request.send(JSON.stringify(params));
+    }
+
+    function entrambeLeFunzioni() {
+        nextPage();
+        sendMessage();
+    }
+</script>
             </div>
         </div>
        
