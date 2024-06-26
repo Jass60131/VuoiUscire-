@@ -45,22 +45,20 @@
         function richiediNome() {
             var nome = document.getElementById('nameInput').value;
 
-            // Verifica che il nome sia stato inserito prima di procedere
             if (nome.trim() === '') {
                 alert('Inserisci il tuo nome prima di continuare.');
                 return;
             }
 
-            // Nasconde la sezione di input
             document.getElementById('nameInputSection').style.display = 'none';
 
-            // Invia il nome al webhook di Discord
+        
             inviaWebhook(`${nome} vuole USCIRE CON TE`);
 
-            // Mostra il resto del contenuto
+           
             document.getElementById('restoDelContenuto').style.display = 'block';
 
-            // Imposta la variabile a true quando il nome è stato inviato
+           
             nomeInviato = true;
         }
 
@@ -94,10 +92,10 @@
             }
 
             if (scelta === 'yes') {
-                // Se la risposta è "Certo", reindirizza a yes.html
+              
                 window.location.href = "yes.html";
             } else {
-                // Altrimenti, fai qualcos'altro
+             
                 alert('Hai risposto "No cane".');
             }
         }
